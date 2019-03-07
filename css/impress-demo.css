@@ -28,6 +28,33 @@
     doesn't do any harm and gives us a fresh start.
 */
 
+@font-face {
+    font-family: Sahel;
+    src: url('Sahel-FD.eot');
+    src: url('Sahel-FD.eot?#iefix') format('embedded-opentype'),
+    url('Sahel-FD.woff') format('woff'),
+    url('Sahel-FD.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Sahel;
+    src: url('Sahel-Bold.eot');
+    src: url('Sahel-Bold.eot?#iefix') format('embedded-opentype'),
+    url('Sahel-Bold.woff') format('woff'),
+    url('Sahel-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Sahel;
+    src: url('Sahel-Black.eot');
+    src: url('Sahel-Black.eot?#iefix') format('embedded-opentype'),
+    url('Sahel-Black.woff') format('woff'),
+    url('Sahel-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -56,6 +83,11 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    font-family: 'Sahel';
+}
+
+p {
+    font-family: 'Sahel';
 }
 ol, ul {
     list-style: none;
@@ -82,7 +114,7 @@ table {
     want to leave anybody behind.
 */
 body {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Sahel';
     min-height: 740px;
 
     background: rgb(215, 215, 215);
@@ -123,6 +155,85 @@ a:focus {
     background: rgba(255,255,255,1);
     text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
 }
+
+
+.main-list li {
+    height: auto;
+    float:inherit;
+    direction: rtl;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left : 2%;
+
+}
+.main-list li a {
+    /*color:  #ffffff;*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width:100px;
+    font-size: 1.6em;
+    font-weight: bold;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.titleText{
+    line-height: 60px;
+    text-align: center;
+    /*font-weight: 800;*/
+    text-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+    /*font-family: 'Sahel';*/
+}
+
+.currentSlide{
+    /*background-color : #ffffff;*/
+    /*opacity: 1;*/
+    color:  #ffffff;
+    font-weight: bold;
+}
+
+.logoFirstPage{
+    display:block;
+    position:absolute;
+    bottom: 5%;
+    width: 15%;
+}
+
+.logoSlides{
+    display:block;
+    position:absolute;
+    left: 2%;
+    width: 12%;
+}
+
+.pageNo{
+    position: absolute;
+    left: 7%;
+    bottom: 6%;
+}
+.references{
+    text-align: left;
+    direction: ltr;
+    font-size: 0.45em;
+    font-family: "Times New Roman";
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
 
 /*
     Because the main point behind the impress.js demo is to demo impress.js
@@ -221,7 +332,7 @@ a:focus {
     color: rgb(102, 102, 102);
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
 
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: 'Sahel';
     font-size: 30px;
     line-height: 36px;
     letter-spacing: -1px;
@@ -233,10 +344,15 @@ a:focus {
     line-height: 72px;
 
     margin-top: 100px;
+    font-family: 'Sahel';
 }
 
 .slide q strong {
     white-space: nowrap;
+}
+
+.slide p {
+    font-family: 'Sahel';
 }
 
 /*
