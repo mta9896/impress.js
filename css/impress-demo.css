@@ -38,6 +38,15 @@
 }
 
 @font-face {
+    font-family: Sahel-ED;
+    src: url('Sahel.eot');
+    src: url('Sahel.eot?#iefix') format('embedded-opentype'),
+    url('Sahel.woff') format('woff'),
+    url('Sahel.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
     font-family: Sahel;
     src: url('Sahel-Bold.eot');
     src: url('Sahel-Bold.eot?#iefix') format('embedded-opentype'),
@@ -117,13 +126,13 @@ body {
     font-family: 'Sahel';
     min-height: 740px;
 
-    background: rgb(215, 215, 215);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
-    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: linear-gradient(to right, #4a6987, #0082c8);
+    /*background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));*/
+    /*background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));*/
+    /*background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));*/
+    /*background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));*/
+    /*background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));*/
+    /*background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));*/
 }
 
 /*
@@ -178,12 +187,46 @@ a:focus {
     padding-bottom: 0.5%;
 }
 
-.titleText{
+.slideText{
+    font-size: 0.8em;
+    direction : rtl;
+    text-align: right;
+    padding-right :5%;
+    line-height: 1.8em;
+}
+
+.slideTitle{
+    font-size: 1em;
+    color: #4a6987;
+    direction : rtl;
+    text-align: right;
+    line-height: 1.9em;
+}
+
+.eng {
+    font-family: "Times New Roman";
+}
+
+.title{
+    direction : rtl;
+    font-size: 1.2em;
     line-height: 60px;
     text-align: center;
-    /*font-weight: 800;*/
     text-shadow: 0 5px 5px rgba(0, 0, 0, .1);
-    /*font-family: 'Sahel';*/
+}
+
+.image {
+    margin : auto;
+}
+
+.blue {
+    color: #4a6987;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
 }
 
 .currentSlide{
@@ -329,7 +372,7 @@ table {
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
 
-    color: rgb(102, 102, 102);
+    color: rgb(74, 74, 74);
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
 
     font-family: 'Sahel';
