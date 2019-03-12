@@ -89,8 +89,9 @@
         When creating your own presentation get rid of this file. Start from scratch, it's fun!
         
     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link href="css/impress-demo.css" rel="stylesheet" />
-    
+
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
@@ -148,6 +149,26 @@
     to next slide after a timeout expires.
     
 -->
+
+<nav >
+    <!--div id="DIVOUTLINE" style="display: none ;position: fixed; width: 10vw; height: 100%; left: 0; top: 5vh"-->
+
+    <ul class = "main-list">
+
+        <li><a id = "intro"> مقدمه</a> </li>
+        <li><a id = "principles"> مرور مفاهیم</a> </li>
+        <li><a id = "experiment"> روش کار</a> </li>
+        <li><a id = "exp_results"> نتایج </a> </li>
+        <li><a id = "result"> نتیجه‌گیری</a> </li>
+        <li><a id = "references"> مراجع</a> </li>
+
+    </ul>
+
+
+
+    <!--/div-->
+</nav>
+
 <div id="impress">
 
     <!--
@@ -171,15 +192,16 @@
         
     -->
 
-    <div id="nameAndSubject" class="step slide" data-x="-1000" data-y="-1500">
+    <div class="step slide" data-x="-1000" data-y="-1500">
         <p align = "center" style = "font-size:0.7em">به نام خدا</p>
         <br> <br> <br>
         <p class="title" style = "font-size:1.1em;"> طراحی و پیاده‌سازی یک سیستم تشخیص بی‌درنگ آریتمی قلبی بر بستر اینترنت اشیا </p>
-        <br> <br>
-        <p class="title" style = "font-size:0.75em" > مرضیه تاجیک </p>
-        <p class="title" style = "font-size:0.6em" > دانشکده‌ی مهندسی کامپیوتر و فناوری اطلاعات  </p>
-        <p class="title" style = "font-size:0.6em" >  استاد راهنما: دکتر ممتازپور </p>
-        <p class="title" style = "font-size:0.6em" >  استاد داور: دکتر صاحب‌زمانی </p>
+        <br>
+        <p class="title blue" style = "font-size:0.9em" > مرضیه تاجیک </p>
+        <p class="title blue" style = "font-size:0.9em" > دانشکده‌ی مهندسی کامپیوتر و فناوری اطلاعات  </p>
+        <br>
+        <p class="title" style = "font-size:0.75em" >  استاد راهنما: دکتر ممتازپور </p>
+        <p class="title" style = "font-size:0.75em" >  استاد داور: دکتر صاحب‌زمانی </p>
 
 
         <img class = "logoFirstPage" style=" position:absolute; left : 5%" src="img/aut.png"  />
@@ -188,11 +210,33 @@
     </div>
 
 
-    <div class="step slide" data-x="0" data-y="-1500">
+    <div id = "introSlide" class="step slide" data-x="500" data-y="-1500">
         <p class="title"> فهرست مطالب</p>
+        <br>
+        <p class="slideText blue"> ۱. مقدمه </p>
+        <p class="slideText blue"> ۲. مرور مفاهیم </p>
+        <p class="slideText small"> ۲.۱ سیگنال نوار قلب</p>
+        <p class="slideText small"> ۲.۲ ترکیب <span class="eng"> QRS</span> </p>
+        <p class="slideText small">۲.۳ مسائل دسته‌بندی</p>
+        <p class="slideText small">۲.۴ معیارهای کارایی در مسائل دسته‌بندی</p>
+        <p class="slideText blue"> ۳. روش کار </p>
+        <p class="slideText small">۳.۱ عملیات پیش‌پردازش</p>
+        <p class="slideText small">۳.۲ ارسال داده‌های پیش‌پردازش‌شده به سرور</p>
+        <p class="slideText small">۳.۳ پردازش داده‌ها در سمت سرور</p>
+        <p class="slideText small">۳.۴ ارزیابی مدل آموزش‌داده‌شده</p>
+        <p class="slideText blue"> ۴. نتایج</p>
+        <p class="slideText blue"> ۵. نتیجه‌گیری </p>
+        <p class="slideText blue"> ۶. مراجع </p>
     </div>
 
-    <div class="step slide" data-x="1000" data-y="-1500">
+    <div class="step" data-x="2000" data-y="-1500" style="">
+        <p class="slideText" style="margin: auto; font-size: 1.2em; color: white;">
+            مقدمه
+        </p>
+
+    </div>
+
+    <div class="step slide" data-x="3500" data-y="-1500">
         <p class="title"> ضرورت تشخیص خودکار آریتمی قلبی </p>
 
         <br>
@@ -207,13 +251,13 @@
 
         <p class="slideTitle"> تشخیص آریتمی در کارهای گذشته </p>
         <p class="slideText"> پیاده‌سازی انواع متنوعی از الگوریتم‌های دسته‌بندی برای تشخیص آریتمی </p>
-        <p class="slideText"> مانند: سیستم‌های فازی، ماشین‌های بردار پشتیبانی و شبکه‌های عصبی</p>
+        <p class="slideText"> مانند سیستم‌های فازی، ماشین‌های بردار پشتیبانی و شبکه‌های عصبی</p>
         <p class="slideText"> بی‌درنگ نبودن اکثر روش‌های پیاده‌سازی‌شده در گذشته </p>
 
-        <span class = "pageNo">1</span>
+        <span class = "pageNo">2</span>
     </div>
 
-    <div class="step slide" data-x="2000" data-y="-1500">
+    <div class="step slide" data-x="5000" data-y="-1500">
         <p class="title"> بیان صورت مسئله </p>
 
         <br>
@@ -231,10 +275,10 @@
         <p class="slideText"> دقت و حساسیت بالای سیستم در تشخیص آریتمی </p>
         <p class="slideText"> رابط کاربری مناسب و قابلیت استفاده‌ی آسان </p>
 
-        <span class = "pageNo">2</span>
+        <span class = "pageNo">3</span>
     </div>
 
-    <div class="step slide" data-x="3000" data-y="-1500">
+    <div id="principlesSlide" class="step slide" data-x="6500" data-y="-1500">
         <p class="title"> راه‌حل ارائه‌شده </p>
 
         <br>
@@ -244,51 +288,58 @@
 
         <br>
 
-        <p class = "slideTitle"> مراحل کلی تشخیص نوع ضربان: </p>
+        <p class = "slideTitle"> مراحل کلی تشخیص نوع ضربان </p>
 
         <br>
-        
-        <img class="image" src="img/diagram.png" width="100%">
+        <div class="imgContainer">
+            <img class="image" src="img/diagram2.png" width="80%">
+            <span style="margin:auto" class="caption">شکل ۱ - مراحل اصلی پیاده‌سازی‌شده در پروژه</span>
+        </div>
 
-
-        <span class = "pageNo">3</span>
+        <span class = "pageNo">4</span>
     </div>
 
-    <div class="step slide" data-x="4000" data-y="-1500">
-        <p class="title"> سیگنال نوار قلب </p>
+    <div class="step" data-x="8000" data-y="-1500" style="">
+        <p class="slideText" style="margin: auto; font-size: 1.2em; color: white;">
+            مرور مفاهیم
+        </p>
+
+    </div>
+
+    <div class="step slide" data-x="9500" data-y="-1500">
+        <p class="title"> سیگنال نوار قلب <span class="eng">(Electrocardiogram)</span> </p>
 
         <br>
 
         <p class="slideText"> قرارگیری تعدادی الکترود بر روی پوست </p>
         <p class="slideText"> اندازه‌گیری نوسانات پتانسیل الکتریکی سطح پوست و تولید یک سیگنال آنالوگ </p>
         <p class="slideText"> حذف نویز از سیگنال آنالوگ و تبدیل آن به سیگنال دیجیتال </p>
-        <p class="slideText"> نتیجه‌ی رسم منحنی این سیگنال: سیگنال نوار قلب </p>
-        <!--<img class="image" width="70%" src="img/leads.png">-->
+        <p class="slideText"> نتیجه‌ی رسم منحنی این سیگنال: سیگنال متناوب نوار قلب </p>
         <br>
-        <p class="slideTitle"> لیدهای قلبی </p>
-        <p class="slideText"> اختلاف بین ولتاژهای دو یا چند الکترود </p>
-        <br>
-        <p class="slideTitle"> نوار قلب ۱۲ لیدی </p>
-        <p class="slideText"> قرارگرفتن ۱۰ الکترود بر روی پوست </p>
-        <p class="slideText"> تولید ۱۲ لید از اختلاف ولتاژ بین این الکترودها و رسم آن‌ها در منحنی نوار قلب </p>
-        <span class = "pageNo">1</span>
+        <div class="imgContainer">
+            <img class="image" width="70%" src="img/ecg.png">
+            <span class="caption" >شکل ۲ - نمونه‌ای از سیگنال دیجیتال نوار قلب [2] </span>
+        </div>
+        <!--<br>-->
+
+        <span class = "pageNo">6</span>
     </div>
 
-    <div class="step slide" data-x="5000" data-y="-1500">
-        <p class="slideTitle"> لیدهای تولیدشده: </p>
-        <p class="slideText">  ۱. ۶ لید اندامی به نام‌های <span style="text-align: left; font-family: 'Times New Roman'"> I, II, III, aVL, aVF, aVR </span></p>
-        <p class="slideText"> ۲. ۶ لید سینه‌ای به نام‌های <span style="text-align: left; font-family: 'Times New Roman'"> V1, V2 V3, V4, V5, V6 </span> </p>
+    <div class="step slide" data-x="11000" data-y="-1500">
+        <!--<p class="slideTitle"> نوار قلب ۱۲ لیدی </p>-->
+        <!--<p class="slideText"> قرارگرفتن ۱۰ الکترود بر روی پوست </p>-->
+        <!--<p class="slideText"> تولید ۱۲ لید از اختلاف ولتاژ بین این الکترودها و رسم آن‌ها در منحنی نوار قلب </p>-->
+        <!--<br>-->
+        <!--<p class="slideTitle"> لیدهای تولیدشده </p>-->
+        <!--<p class="slideText">  ۱. ۶ لید اندامی به نام‌های <span style="text-align: left; font-family: 'Times New Roman'"> I, II, III, aVL, aVF, aVR </span></p>-->
+        <!--<p class="slideText"> ۲. ۶ لید سینه‌ای به نام‌های <span style="text-align: left; font-family: 'Times New Roman'"> V1, V2 V3, V4, V5, V6 </span> </p>-->
 
-        <br>
+        <!--<div style="display: flex; width: 100%; justify-content: center";>-->
+            <!--<img class="image" width="70%" src="img/leads.png">-->
+        <!--</div>-->
 
-        <img class="image" width="70%" src="img/leads.png">
+        <!--<p class="slideText"></p>-->
 
-        <p class="slideText"></p>
-
-        <span class = "pageNo">1</span>
-    </div>
-
-    <div class="step slide" data-x="6000" data-y="-1500">
         <p class="title"> ترکیب <span style="font-family: 'Times New Roman'"> QRS</span> </p>
 
         <br>
@@ -302,15 +353,36 @@
                 <p class="slideText"> ۴. <span class="eng"> S </span> </p>
                 <p class="slideText"> ۵. <span class="eng"> T </span> </p>
                 <br>
-                <p class="slideText">طول عادی بازه‌ی <span class="eng"> QRS </span>: بین <span style="direction: ltr"> ۰/۰۸ </span> تا <span style="direction: ltr"> ۰/۱ </span> ثانیه </p>
+                <!--reference-->
+                <p class="slideText">طول طبیعی بازه‌ی <span class="eng"> QRS </span>: بین <span style="direction: ltr"> ۰/۰۸ </span> تا <span style="direction: ltr"> ۰/۱ </span>  ثانیه [3] </p>
+                <p class="slideText">طول طبیعی بازه‌ی <span class="eng"> RR </span>: بین <span style="direction: ltr"> ۰/۶۷ </span> تا <span style="direction: ltr"> ۱/۰۰ </span> ثانیه [4] </p>
             </div>
-            <img class="image" width="400" src="img/qrs.png" style="margin-top: 3%; margin-left: 3%">
+            <div class="imgContainer" style="width: 400px;">
+                <img class="image" width="400" src="img/qrs.png" style="margin-top: 3%; margin-left: 3%">
+                <span class="caption">  شکل ۳ - ترکیب <span class="eng"> QRS </span> </span>
+            </div>
         </div>
-        <span class = "pageNo">1</span>
+
+        <span class = "pageNo">7</span>
     </div>
 
-    <div class="step slide" data-x="7000" data-y="-1500">
-        <p class="title"> مسائل دسته‌بندی </p>
+    <div class="step slide" data-x="12500" data-y="-1500">
+        <p class="title">آریتمی قلبی</p>
+        <br>
+        <p class="slideText">دلیل ایجاد: عدم انتقال درست سیگنال‌های الکتریکی در قلب</p>
+        <p class="slideText">علایم: تپش قلب به صورت بیش از اندازه سریع، کند یا نامنظم</p>
+        <br>
+        <p class="slideTitle">تاثیر آریتمی بر روی سیگنال نوار قلب:</p>
+        <p class="slideText">ایجاد تغییراتی در شکل ضربان و شکل ترکیب <span class="eng">QRS</span> </p>
+        <br>
+        <p class="slideTitle">نتیجه‌ی ایجاد اختلال در سیستم رسانایی الکتریکی قلب</p>
+        <p class="slideText">طولانی‌تر شدن مدت‌زمان انتقال سیگنال‌های الکتریکی قلب</p>
+        <p class="slideText">عریض‌تر شدن بازه‌ی <span class="eng">QRS</span> </p>
+        <span class = "pageNo">8</span>
+    </div>
+
+    <div class="step slide" data-x="14000" data-y="-1500">
+        <p class="title"> مسائل دسته‌بندی <span class="eng">(Classification)</span> </p>
 
         <br>
 
@@ -327,10 +399,10 @@
         <p class="slideTitle"> انواع دسته‌بندی از نظر تعداد دسته‌ها</p>
         <p class="slideText"> دسته‌بندی دودویی </p>
         <p class="slideText"> دسته‌بندی چند کلاسی </p>
-
+        <span class = "pageNo">9</span>
     </div>
 
-    <div class="slide step" data-x="8000" data-y="-1500">
+    <div class="slide step" data-x="15500" data-y="-1500">
         <p class="title"> روش <span class="eng"> SVM </span> </p>
         <p class="slideTitle"> یکی از پرکاربردترین روش‌ها در حل مسائل دسته‌بندی </p>
         <p class="slideText"> روش ماشین‌های بردار پشتیبانی <span class="eng"> (Support Vector Machines) </span> </p>
@@ -343,24 +415,27 @@
                 <p class="slideText"> <span class="blue"> هدف: </span> یافتن ابرصفحه‌ای با بیشترین حاشیه برای دسته‌بندی داده‌‌ها </p>
                 <p class="slideText"> <span class="blue"> حاشیه:</span> فاصله از نزدیک‌ترین نقطه‌ی داده در هر یک از کلاس‌ها </p>
             </div>
-            <img class="image" src="img/svmMargin2.png" width="400" style="margin-left: 0px; margin-top: 0px">
+            <div class="imgContainer" style="width: 400px;">
+                <img class="image" src="img/svmMargin2.png" width="400" style="margin-left: 0px; margin-top: 0px">
+                <span class="caption"> شکل ۴ - نمونه‌ای از یک مسئله‌ی دسته‌بندی دودویی در فضای دو بعدی [5]</span>
+            </div>
         </div>
+        <span class = "pageNo">10</span>
 
     </div>
 
-    <div class="step slide" data-x="9000" data-y="-1500">
+    <div class="step slide" data-x="17000" data-y="-1500">
         <p class="title"> معیارهای کارایی در مسائل دسته‌بندی </p>
 
         <br>
 
         <p class="slideTitle"> معیارهای استاندارد برای سنجش میزان موفقیت الگوریتم‌های دسته‌بندی </p>
 
-        <ul>
-            <li> <p class="slideText"> مثبت صحیح <span class="eng blue"> (True Positive)</span> </p> </li>
-            <li> <p class="slideText"> مثبت کاذب <span class="eng blue"> (False Positive)</span> </p> </li>
-            <li> <p class="slideText"> منفی صحیح <span class="eng blue"> (True Negative)</span> </p> </li>
-            <li> <p class="slideText"> منفی کاذب <span class="eng blue"> (False Negative)</span> </p> </li>
-        </ul>
+             <p class="slideText"> مثبت صحیح <span class="eng blue"> (True Positive)</span> </p>
+             <p class="slideText"> مثبت کاذب <span class="eng blue"> (False Positive)</span> </p>
+             <p class="slideText"> منفی صحیح <span class="eng blue"> (True Negative)</span> </p>
+             <p class="slideText"> منفی کاذب <span class="eng blue"> (False Negative)</span> </p>
+
         <br>
         <div class="container" style="padding-left: 0px">
             <div style="width: 50%">
@@ -369,12 +444,15 @@
                 <p class="slideText"> محور افقی: برچسب‌های پیش‌بینی‌شده برای داده‌ها </p>
                 <p class="slideText"> محور عمودی: برچسب‌های واقعی داده‌‌ها </p>
             </div>
-            <img class="image" src="img/confmat.png" width="300" style="margin-left: 0px; margin-top: 0px">
+            <div class="imgContainer" style=" width: 300px;">
+                <img class="image" src="img/confmat.png" width="280" style="margin-left: 0px; margin-top: 0px">
+                <span class="caption">شکل ۵ - ماتریس درهم‌ریختگی [6]</span>
+            </div>
         </div>
-        <span class = "pageNo">1</span>
+        <span class = "pageNo">11</span>
     </div>
 
-    <div class="step slide" data-x="10000" data-y="-1500">
+    <div id="experimentSlide" class="step slide" data-x="18500" data-y="-1500">
         <p class="title"> معیارهای کارایی در مسائل دسته‌بندی </p>
         <br>
         <br>
@@ -397,50 +475,70 @@
             <p class="slideTitle"> صحت کلی <span class="eng"> (Overall Accuracy) </span> </p>
         </div>
 
-        <span class = "pageNo">1</span>
+        <span class = "pageNo">12</span>
     </div>
 
-    <div class="step slide" data-x="11000" data-y="-1500">
+    <div class="step" data-x="20000" data-y="-1500" style="">
+        <p class="slideText" style="margin: auto; font-size: 1.2em; color: white;">
+            روش کار
+        </p>
+
+    </div>
+
+
+    <div class="step slide" data-x="21500" data-y="-1500">
+
         <p class="title">روش کار </p>
         <br>
+        <br>
+        <div class="imgContainer">
+            <img class="image" src="img/diagram.png" width="100%">
+            <span class="caption">شکل ۶ - معماری کلی پروژه</span>
+        </div>
+        <br>
+        <br>
+        <br>
         <p class="slideTitle"> پیاده‌سازی پروژه در دو بخش کلی </p>
-        <p class="slideText"> ۱. پیش‌پردازش سیگنال نوار قلب بر روی سخت افزار </p>
-        <br>
-        <!--<div style="border: solid 2px #4a6987; display: flex; justify-content: center; align-items: center">-->
-        <img src="img/preprocessing.png" width="80%">
-        <!--</div>-->
-        <br>
-        <p class="slideText"> ۲. پردازش اصلی و اجرای الگوریتم دسته‌بندی بر روی سرور </p>
-        <br>
-        <img src="img/server.png" width="80%">
-
-        <span class = "pageNo">1</span>
+        <p class="slideText"> ۱.  پیش‌پردازش سیگنال نوار قلب بر روی سخت افزار </p>
+        <p class="slideText"> ۲.  پردازش اصلی و اجرای الگوریتم دسته‌بندی بر روی سرور </p>
+        <span class = "pageNo">14</span>
     </div>
 
-    <div class="step slide" data-x="12000" data-y="-1500">
+
+    <div class="step slide" data-x="23000" data-y="-1500">
         <p class="title"> عملیات پیش‌پردازش سیگنال نوار قلب </p>
+        <br>
+        <br>
+        <div class="imgContainer">
+            <img src="img/preprocessing.png" width="100%">
+            <span class="caption">شکل ۷ - معماری کلی پروژه در بخش پیش‌پردازش</span>
+        </div>
         <br>
         <p class="slideText"> ورودی: سیگنال دیجیتال ضربان قلب </p>
         <p class="slideText"> خروجی: موقعیت زمانی قله‌ی <span class="eng"> R </span> در ترکیب <span class="eng"> QRS </span> هر ضربان </p>
         <br>
-        <!--<p class="slideTitle"> نحوه‌ی پیاده‌سازی </p>-->
-        <!--<p class="slideText"> استفاده از الگوریتم تشخیص <span class="eng"> QRS </span> پن-تامپکینز </p>-->
         <p class="slideText"> پیاده‌سازی الگوریتم بر روی ماژول <span class="eng"> ESP8266 </span> </p>
-        <p class="slideText blue"> <span class="eng"> ESP8266: </span>  یک ماژول وای‌فای با قابلیت‌های میکروکنترلری</p>
-        <br>
-        <p class="slideTitle"> مراحل پیش‌پردازش </p>
-        <p class="slideText"> ۱. دریافت سیگنال دیجیتال نوار قلب از حس‌گر ضربان قلب </p>
-        <p class="slideText"> ۲. تشخیص قله‌های <span class="eng"> R </span> در ضربان‌ها، با استفاده از الگوریتم تشخیص <span class="eng"> QRS </span> پن-تامپکینز </p>
-        <p class="slideText"> ۳. ارسال قله‌های <span class="eng"> R </span> تشخیص‌داده‌شده به سرور برای انجام پردازش‌های آینده </p>
-        <span class = "pageNo">1</span>
+        <p class="slideText blue"> <span class="eng"> ESP8266: </span>  ماژولی با قابلیت <span class="eng"> Wi-Fi </span> + میکروکنترلر ۳۲ بیتی با فرکانس ۸۰ مگاهرتز </p>
+
+        <span class = "pageNo">15</span>
     </div>
 
-    <div class="step slide" data-x="13000" data-y="-1500">
+    <div class="step slide" data-x="24500" data-y="-1500">
+        <br>
+        <br>
+        <p class="slideTitle"> مراحل پیش‌پردازش </p>
+        <p class="slideText"> ۱. دریافت سیگنال دیجیتال نوار قلب از حس‌گر ضربان قلب  با نرخ نمونه‌برداری معین</p>
+        <p class="slideText"> ۲. تشخیص قله‌های <span class="eng"> R </span> ضربان‌ها، با استفاده از الگوریتم تشخیص <span class="eng"> QRS </span> پن-تامپکینز [7]</p>
+        <p class="slideText"> ۳. ارسال قله‌های <span class="eng"> R </span> تشخیص‌داده‌شده به سرور برای انجام پردازش‌های آینده </p>
+        <span class = "pageNo">16</span>
+    </div>
+
+    <div class="step slide" data-x="26000" data-y="-1500">
         <p class="title"> دریافت سیگنال دیجیتال نوار قلب از حس‌گر </p>
         <br>
         <p class="slideTitle"> شبیه‌سازی رفتار حس‌گر دیجیتال ضربان قلب </p>
         <p class="slideText"> ارسال داده‌های ضربان قلب از کامپیوتر به <span class="eng"> ESP8266 </span> از طریق ارتباط سریال </p>
-        <br>
+        <p class="slideText"> دریافت داده‌های جدید رسیده از حس‌گر، با استفاده از مکانیزم وقفه در <span class="eng"> ESP8288 </span> </p>
 
         <p class="slideTitle"> اتصال <span class="eng"> ESP8266 </span> به کامپیوتر از طریق آردوینو </p>
         <div class="container">
@@ -449,14 +547,17 @@
                 <p class="slideText"> اتصال <span class="eng"> TX </span> در <span class="eng"> ESP8266 </span> به <span class="eng"> TX </span> در آردوینو </p>
                 <p class="slideText"> اتصال آردوینو از طریق پورت <span class="eng"> USB </span> به کامپیوتر </p>
             </div>
-            <img src="img/arduino_esp1.png" height="300px">
+            <div class="imgContainer" style="width: 380px">
+                <img src="img/arduino_esp1.png" height="300px">
+                <span class="caption">شکل ۸ -نحوه‌ی اتصال ماژول <span class="eng">ESP8266</span> از طریق آردوینو به کامپیوتر</span>
+            </div>
         </div>
 
-        <span class = "pageNo">1</span>
+        <span class = "pageNo">17</span>
     </div>
 
-    <div class="step slide" data-x="14000" data-y="-1500">
-        <p class="title"> الگوریتم تشخیص <span class="eng"> QRS </span> </p>
+    <div class="step slide" data-x="27500" data-y="-1500">
+        <p class="title"> الگوریتم تشخیص <span class="eng"> QRS </span> پن-تامپکینز </p>
         <br>
         <p class="slideTitle"> مراحل تشخیص <span class="eng"> QRS </span> </p>
         <p class="slideText"> ۱. حذف نویز سیگنال به کمک فیلتر میان‌گذر <span class="blue"> (حذف فرکانس‌های پایین ۵ و بالای ۱۱ هرتز)</span> </p>
@@ -465,43 +566,57 @@
         <p class="slideText"> ۴. انتگرال‌گیر با پنجره‌ی لغزان </p>
         <p class="slideText"> ۵. تعیین موقعیت قله‌های <span class="eng"> R </span> با کمک مقدارهای آستانه </p>
         <br>
-        <div style="width: 100%; display: flex; justify-content: center">
-            <img height="190px" src="img/qrsDetection.png">
+        <div class="imgContainer">
+            <img width="80%" src="img/qrsDetection.png" style="margin: auto">
+            <span class="caption">شکل ۹ - دیاگرام مراحل الگوریتم پن-تامپکینز [8]</span>
         </div>
 
-        <span class = "pageNo">1</span>
+        <span class = "pageNo">18</span>
     </div>
 
-    <div class="step slide" data-x="15000" data-y="-1500">
+    <div class="step slide" data-x="29000" data-y="-1500">
         <p class="title"> ارسال داده‌های پیش‌پردازش‌شده به سرور </p>
         <br>
-        <p class="slideTitle"> دریافت داده‌ها از حس‌گر و تشخیص بی‌درنگ قله‌های <span class="eng"> R </span>  </p>
-        <p class="slideText"> اجرای الگوریتم تشخیص <span class="eng"> QRS </span> بر روی نمونه‌های سیگنال دیجیتال ضربان قلب </p>
-        <p class="slideText"> در صورت تشخیص قله‌ی <span class="eng"> R </span> در سیگنال، ارسال شماره نمونه‌ی آن به سرور </p>
-        <p class="slideText"> دریافت هم‌زمان داده‌های جدید رسیده از حس‌گر، با استفاده از مکانیزم وقفه در <span class="eng"> ESP8288 </span> </p>
-
+        <!--<p class="slideTitle"> دریافت داده‌ها از حس‌گر و تشخیص بی‌درنگ قله‌های <span class="eng"> R </span>  </p>-->
+        <!--<p class="slideText"> اجرای الگوریتم تشخیص <span class="eng"> QRS </span> بر روی نمونه‌های سیگنال دیجیتال ضربان قلب </p>-->
+        <!--<p class="slideText"> در صورت تشخیص قله‌ی <span class="eng"> R </span> در سیگنال، ارسال شماره نمونه‌ی آن به سرور </p>-->
+        <!--<p class="slideText"> دریافت هم‌زمان داده‌های جدید رسیده از حس‌گر، با استفاده از مکانیزم وقفه در <span class="eng"> ESP8288 </span> </p>-->
+        <p class="slideTitle">ارسال بی‌درنگ قله‌های <span class="eng">R</span> </p>
         <br>
         <p class="slideTitle"> نحوه‌ی ارسال مقادیر به سرور </p>
         <p class="slideText"> با استفاده از قابلیت ارتباط <span class="eng"> Wi-Fi </span> در ماژول <span class="eng"> ESP8266 </span> </p>
         <p class="slideText"> ارسال درخواست <span class="eng"> HTTP GET </span> به سرور و قراردادن مقدار ارسالی در <span class="eng"> URL </span> درخواست </p>
         <br>
         <span class="eng"> GET /store/{value} </span>
-        <span class = "pageNo">1</span>
+        <span class = "pageNo">19</span>
     </div>
 
-    <div class="step slide" data-x="16000" data-y="-1500">
+    <div class="step slide" data-x="30500" data-y="-1500">
         <p class="title"> پردازش داده‌ها در سمت سرور </p>
 
         <br>
-        <p class="slideTitle"> مراحل اصلی پردازش سمت سرور </p>
-        <p class="slideText"> ۱. آموزش دسته‌بند <span class="eng"> SVM </span> و ارزیابی عملکرد آن </p>
-        <p class="slideText"> ۲. پیاده‌سازی کد سمت سرور برای دریافت داده‌های ضربان‌ها از سخت‌افزار و پیش‌بینی کلاس هر ضربان </p>
-        <p class="slideText"> ۳. ارسال نتایج پیش‌بینی به کلاینت‌های وب </p>
+        <div class="imgContainer">
+            <img src="img/server.png" width="100%">
+            <span class="caption">شکل ۱۰ - معماری کلی پروژه در بخش پردازش اصلی</span>
+        </div>
+        <br>
+        <br>
+        <p class="slideText">ورودی: داده‌های پیش‌پردازش‌شده (قله‌های <span class="eng">R</span>) </p>
+        <p class="slideText">خروجی: کلاس آریتمی تشخیص‌داده‌شده برای هر ضربان</p>
+        <br>
+        <p class="slideText">پیاده‌سازی الگوریتم دسته‌بندی: با استفاده از زبان پایتون و کتاب‌خانه‌ی <span class="eng">scikit-learn</span> </p>
+        <p class="slideText">پیاده‌سازی کد سمت سرور: با استفاده از فریم‌ورک <span class="eng">Django</span> </p>
 
-        <span class = "pageNo">1</span>
+        <!--<p class="slideTitle"> مراحل اصلی پردازش سمت سرور </p>-->
+        <!--<p class="slideText"> ۱. آموزش دسته‌بند <span class="eng"> SVM </span> و ارزیابی عملکرد آن </p>-->
+        <!--<p class="slideText"> ۲. پیاده‌سازی کد سمت سرور برای دریافت داده‌های ضربان‌ها از سخت‌افزار و پیش‌بینی کلاس هر ضربان </p>-->
+        <!--<p class="slideText"> ۳. ارسال نتایج پیش‌بینی به کلاینت‌های وب </p>-->
+
+        <span class = "pageNo">20</span>
     </div>
 
-    <div class="step slide" data-x="17000" data-y="-1500">
+
+    <div class="step slide" data-x="32000" data-y="-1500">
         <p class="title"> اجرای الگوریتم دسته‌بندی با روش <span class="eng"> SVM </span> </p>
         <br>
         <p class="slideTitle"> مراحل دسته‌بندی </p>
@@ -512,55 +627,57 @@
         <br>
         <p class="slideTitle"> داده‌های مورد استفاده در این پروژه برای اجرای دسته‌بندی </p>
         <p class="slideText"> پایگاه‌داده‌ی آریتمی <span class="eng"> MIT-BIH </span> </p>
-        <span class = "pageNo">1</span>
+        <span class = "pageNo">21</span>
     </div>
 
-    <div class="step slide" data-x="18000" data-y="-1500">
-        <p class="title"> تقسیم داده‌ها به دو مجموعه‌ی داده‌های آموزش و تست </p>
+    <div class="step slide" data-x="33500" data-y="-1500">
+        <!--<p class="title"> تقسیم داده‌ها به دو مجموعه‌ی داده‌های آموزش و تست </p>-->
+        <p class="title"> پایگاه‌داده‌ی  پایگاه‌داده‌ی <span class="eng"> MIT-BIH </span> </p>
         <br>
         <p class="slideTitle"> پایگاه‌داده‌ی <span class="eng"> MIT-BIH </span> </p>
         <p class="slideText"> پرکاربردترین مجموعه داده برای دسته‌بندی و ارزیابی الگوریتم‌های تشخیص آریتمی </p>
         <!--(منبع ۲۰ مقاله)-->
-        <p class="slideText"> شامل ۴۸ نوار قلب ۳۰ دقیقه‌ای، گرفته‌شده از ۴۷ بیمار </p>
-        <p class="slideText"> ثبت سیگنال دیجیتال گرفته‌شده از لید <span class="eng"> II </span> و یک لید دیگر برای هر نوار قلب </p>
+        <p class="slideText"> شامل ۴۸ نوار قلب ۳۰ دقیقه‌ای </p>
         <p class="slideText"> ضربان‌های تفکیک شده از یکدیگر، همراه با برچسب‌هایی که نوع آریتمی هر ضربان را نشان می‌دهند </p>
+        <!--<br>-->
+        <!--<p class="slideTitle"> کلاس‌های آریتمی موجود در پایگاه‌داده‌ی <span class="eng"> MIT-BIH </span> </p>-->
+        <!--<p class="slideText"> بیش از ۱۵ نوع برچسب برای ضربان‌ها </p>-->
+        <p class="slideText"> تقسیم این برچسب‌ها به ۵ کلاس اصلی، طبق استاندارد انجمن پیشبرد ابزار پزشکی <span class="eng"> (AAMI) </span> </p>
         <br>
-        <p class="slideTitle"> تقسیم داده‌‌ها به دو بخش آموزش و تست طبق استاندارد <span class="eng"> AAMI </span> </p>
-        <p class="slideText"> مجموعه‌ی آموزش شامل ۲۲ نوار قلب و مجموعه‌ی تست شامل ۲۲ نوار قلب دیگر </p>
-        <p class="slideText"> عدم وجود هم‌زمان ضربانی از یک بیمار خاص در هر دو مجموعه </p>
+        <!--<p class="slideTitle"> تقسیم داده‌‌ها به دو بخش آموزش و تست </p>-->
+        <!--<p class="slideText">طبق الگوی معرفی‌شده در [9]</p>-->
+        <!--<p class="slideText"> عدم وجود هم‌زمان ضربانی از یک بیمار خاص در هر دو مجموعه </p>-->
+        <!--<p class="slideText"> مجموعه‌ی آموزش شامل ۲۲ نوار قلب و مجموعه‌ی تست شامل ۲۲ نوار قلب دیگر </p>-->
         <br>
-        <span class = "pageNo">1</span>
+        <span class = "pageNo">22</span>
     </div>
 
-    <div class="step slide" data-x="19000" data-y="-1500">
+    <div class="step slide" data-x="35000" data-y="-1500">
         <p class="title">  </p>
-        <br>
-        <p class="slideTitle"> کلاس‌های آریتمی موجود در پایگاه‌داده‌ی <span class="eng"> MIT-BIH </span> </p>
-        <p class="slideText"> بیش از ۱۵ نوع برچسب برای ضربان‌ها </p>
-        <p class="slideText"> تقسیم این برچسب‌ها به ۵ کلاس اصلی، طبق استاندارد <span class="eng"> AAMI </span> </p>
         <br>
 
         <p class="slideTitle"> کلاس‌های اصلی آریتمی در الگوریتم دسته‌بندی حاضر </p>
-        <p class="slideText">۱. ضربان‌های عادی <span class="eng"> (N)
-            <!--:</span> حدود ۹۰٪ پایگاه داده -->
+        <p class="slideText">۱. ضربان‌های عادی <span class="eng"> (N) </span>
+            :</span> حدود ۹۰٪ پایگاه داده
         </p>
         <p class="slideText"> ۲. ضربان‌های نابه‌جای فوق بطنی
-            <!--<span class="eng"> (SVEB):</span> حدود ۳٪ پایگاه داده -->
+            <span class="eng"> (SVEB):</span> حدود ۳٪ پایگاه داده
         </p>
         <p class="slideText"> ۳. ضربان‌های نابه‌جای بطنی
-            <!--<span class="eng"> (VEB):</span> حدود ۶٪ پایگاه داده -->
+            <span class="eng"> (VEB):</span> حدود ۶٪ پایگاه داده
         </p>
         <p class="slideText"> ۴. ضربان‌های ادغام‌شده
-            <!--<span class="eng"> (F):</span> حدود ۱٪ پایگاه داده -->
+            <span class="eng"> (F):</span> حدود ۱٪ پایگاه داده
         </p>
         <p class="slideText"> ۵. ضربان‌های ناشناخته
-            <!--<span class="eng"> (Q):</span> تعداد بسیار پایین -->
+            <span class="eng"> (Q):</span> تعداد بسیار پایین
         </p>
+        <p class="slideTitle">عدم تعادل شدید در داده‌‌ها</p>
 
-        <span class = "pageNo">1</span>
+        <span class = "pageNo">23</span>
     </div>
 
-    <div class="step slide" data-x="20000" data-y="-1500">
+    <div class="step slide" data-x="36500" data-y="-1500">
         <p class="title"> استخراج ویژگی‌ها </p>
         <br>
         <p class="slideText"> ویژگی اصلی استفاده‌شده: بازه‌ی <span class="eng"> RR </span> </p>
@@ -569,22 +686,23 @@
         <p class="slideText"> <span class="eng"> Pre-RR </span>: فاصله‌ی زمانی بین قله‌ی <span class="eng"> R </span> ضربان جاری و قله‌ی <span class="eng"> R </span> ضربان قبلی </p>
         <p class="slideText"> <span class="eng"> Post-RR </span>: فاصله‌ی زمانی بین قله‌ی <span class="eng"> R </span> ضربان جاری و قله‌ی <span class="eng"> R </span> ضربان بعدی </p>
         <p class="slideText"> <span class="eng"> Local-RR </span>: میانگین ۱۰ مقدار <span class="eng"> Pre-RR </span> اخیر </p>
-        <p class="slideText"> <span class="eng"> Global-RR </span>: میانگین مقادیر <span class="eng"> Pre-RR </span> دریافت‌شده در ۱۰ دقیقه‌ی گذشته </p>
+        <p class="slideText"> <span class="eng"> Global-RR </span>: میانگین مقادیر <span class="eng"> Pre-RR </span> دریافت‌شده در ۵ دقیقه‌ی گذشته </p>
         <br>
-        <p class="slideText"> هر یک از این چهار ویژگی، نرمال‌سازی شده و ۴ ویژگی دیگر را می‌سازند. </p>
+        <!--<p class="slideText"> هر یک از این چهار ویژگی، نرمال‌سازی شده و ۴ ویژگی دیگر را می‌سازند. </p>-->
+        <p class="slideTitle"> ساخت مدل <span class="eng"> SVM</span> و آموزش آن با استفاده از ویژگی‌ها </p>
         <p class="slideTitle">  </p>
-        <span class = "pageNo">1</span>
+        <span class = "pageNo">24</span>
     </div>
 
-    <div class="step slide" data-x="21000" data-y="-1500">
-        <p class="title"> آموزش‌دادن مدل SVM با استفاده از مجموعه داده‌های آموزش </p>
-        <br>
+    <!--<div class="step slide" data-x="33500" data-y="-1500">-->
+        <!--<p class="title"> آموزش‌دادن مدل SVM با استفاده از مجموعه داده‌های آموزش </p>-->
+        <!--<br>-->
 
 
-        <span class = "pageNo">1</span>
-    </div>
+        <!--<span class = "pageNo">1</span>-->
+    <!--</div>-->
 
-    <div class="step slide" data-x="22000" data-y="-1500">
+    <div class="step slide" data-x="38000" data-y="-1500">
         <p class="title"> ارزیابی مدل آموزش‌داده‌شده </p>
         <br>
 
@@ -593,30 +711,135 @@
         <p class="slideTitle"> معیارهای کارایی برای ارزیابی دسته‌بندی آریتمی در استاندارد <span class="eng"> AAMI </span> </p>
         <p class="slideText"> ۱. اندیس <span class="eng"> j </span>: مجموع حساسیت‌ها و دقت‌های الگوریتم در تشخیص کلاس‌های VEB و SVEB آریتمی (مقداری بین ۰ و ۴)  </p>
         <p class="slideText"> ۲. کاپای کوهن (𝜿): معیاری قوی‌تر از صحت کلی، با احتساب تعداد نمونه‌های کلاس‌ها، که برای داده‌های نامتعادل مناسب‌تر است. (مقداری بین ۰ و ۱) </p>
-        <p class="slideText"> ۳. اندیس <span class="eng"> j𝜿 </span> (معیار اصلی کارایی) </p>
+        <p class="slideText"> ۳. اندیس <span class="eng"> j𝜿 </span>  (معیار اصلی کارایی) [10] </p>
         <img src="img/jk.png" height="70">
 
-        <span class = "pageNo">1</span>
+        <span class = "pageNo">25</span>
     </div>
 
-    <div class="step slide" data-x="23000" data-y="-1500">
+    <div id="expResultSlide" class="step slide" data-x="39500" data-y="-1500">
         <p class="title"> اجرای کد سمت سرور برای دسته‌بندی ضربان‌ها </p>
+        <br>
         <br>
         <p class="slideText"> اجرای الگوریتم دسته‌بندی و ارزیابی آن به صورت آفلاین </p>
         <p class="slideText"> بارگذاری مدل ساخته‌شده بر روی سرور </p>
         <p class="slideText"> اجرای تابع پیش‌بینی با رسیدن هر داده‌ی جدید به سرور و محاسبه‌ی کلاس ضربان </p>
+        <p class="slideText">ارسال نتایج پیش‌بینی به کلاینت‌های وب</p>
 
-
-        <span class = "pageNo">1</span>
+        <span class = "pageNo">26</span>
     </div>
 
-    <div class="step slide" data-x="24000" data-y="-1500">
-        <p class="title"> </p>
+    <div class="step" data-x="41000" data-y="-1500" style="">
+        <p class="slideText" style="margin: auto; font-size: 1.2em; color: white;">
+            نتایج
+        </p>
 
-
-        <span class = "pageNo">1</span>
     </div>
 
+    <div class="step slide" data-x="42500" data-y="-1500">
+
+        <p class="title"> نتایج </p>
+        <p class="slideTitle"> زمان پاسخ سیستم </p>
+        <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="img/tresponse.png">
+        </div>
+        <br>
+        <p class="slideTitle"> ماتریس درهم‌ریختگی نتیجه </p>
+        <div class="imgContainer">
+            <img src="img/confmat_exp.png" width="340" style="margin: auto">
+            <span class="caption"> شکل ۱۱ - ماتریس درهم‌ریختگی نتیجه</span>
+        </div>
+        <span class = "pageNo">28</span>
+    </div>
+
+    <div id="resultSlide" class="step slide" data-x="44000" data-y="-1500">
+        <p class="title">معیارهای کارایی نهایی</p>
+        <br>
+        <p class="slideTitle"> اندیس <span class="eng"> j </span> </p>
+        <p class="slideText"> ۱/۹۹</p>
+        <p class="slideTitle">کاپای کوهن</p>
+        <p class="slideText">۰/۳۶</p>
+        <p class="slideTitle"> اندیس <span class="eng"> j𝜿 </span></p>
+        <p class="slideText">۰/۴۳</p>
+        <br>
+        <p class="slideText"> بالاترین مقدار اندیس <span class="eng"> j𝜿 </span> به‌دست‌آمده در کارهای گذشته برابر با ۰/۶۶ [11]</p>
+        <p class="slideText">بالاترین مقدار اندیس <span class="eng"> j𝜿 </span> به‌دست‌آمده در کارهای گذشته، تنها با استفاده از ویژگی  <span class="eng"> RR</span> برابر با ۰/۴۴ [10] </p>
+        <span class = "pageNo">29</span>
+    </div>
+
+    <div class="step" data-x="45500" data-y="-1500" style="">
+        <p class="slideText" style="margin: auto; font-size: 1.2em; color: white;">
+            نتیجه‌گیری
+        </p>
+
+    </div>
+
+    <div class="step slide" data-x="47000" data-y="-1500">
+        <p class="title"> نتیجه‌گیری </p>
+        <br>
+        <p class="slideText"> <span class="blue"> هدف پروژه: </span> پیاده‌سازی یک سیستم بی‌درنگ تشخیص آریتمی بر بستر اینترنت اشیا</p>
+        <p class="slideText">  پیاده‌سازی سیستم در دو بخش:</p>
+        <p class="slideText blue">      ۱. پیش‌پردازش (الگوریتم تشخیص <span class="eng"> QRS </span> پن-تامپکینز)</p>
+        <p class="slideText blue">       ۲. پردازش اصلی روی سرور (مدل دسته‌بندی <span class="eng"> SVM </span>)</p>
+        <p class="slideText">  نمایش نتایج به کاربر بر روی اپلیکیشن وب</p>
+
+        <br>
+        <p class="slideTitle"> پاسخ به نیازمندی‌ها </p>
+        <p class="slideText"> زمان پاسخ پایین‌تر از ۲ ثانیه </p>
+        <p class="slideText"> سخت‌افزار قابل حمل با حجم پایین </p>
+        <p class="slideText"> دقت، حساسیت و اندیس <span class="eng"> j𝜿 </span> دسته‌بندی: پایین‌تر از الگوریتم‌های گذشته که از ویژگی‌های متعددی استفاده می‌کنند. </p>
+
+        <span class = "pageNo">31</span>
+    </div>
+
+
+    <div id="referencesSlide" class="step slide" data-x="48500" data-y="-1500">
+        <p class="title">کارهای آینده </p>
+        <br>
+        <p class="slideText"> بهبود الگوریتم دسته‌بندی با استفاده از ویژگی بازه‌ی <span class="eng"> RR </span></p>
+        <p class="slideText"> آموزش چند مدل <span class="eng"> SVM </span> ، هر یک با مجموعه‌ای از ویژگی‌ها، و سپس ترکیب نتایج آن‌ها </p>
+        <p class="slideText"> بررسی الگوریتم‌های دسته‌بندی مقاوم‌تر در برابر عدم تعادل داده‌های آموزش </p>
+        <span class = "pageNo">32</span>
+    </div>
+
+    <div class="step slide" data-x="50000" data-y="-1500">
+        <p class="title">مراجع </p>
+        <br>
+        <span class="small eng">[1] “Sudden Cardiac Death (Sudden Cardiac Arrest),” [Online]. Available: https://my.clevelandclinic.org/health/diseases/17522-sudden-cardiac-death-sudden-cardiac-arrest [Accessed Jan. 21, 2019] </span>
+        <br>
+        <span class="small eng">[2] “Sinus Arrhythmias,” Sept. 2016. [Online]. Available: http://nursing-bibs.blogspot.com/2016/09/sinus-arrhythmias.html [Accessed Mar. 1, 2019].</span>
+        <br>
+        <span class="small eng">[3] “QRS Complex,” [Online]. Available: https://www.healio.com/cardiology/learn-the-heart/ecg-review/ecg-interpretation-tutorial/qrs-complex [Accessed Jan. 22, 2019].</span>
+        <br>
+        <span class="small eng">[4] C. K. Friedberg. Diseases of the Heart. Saunders, 2010.</span>
+        <br>
+        <span class="small eng">[5] R. Gandhi, “SVM model from scratch,” June 2018. [Online]. Available: https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47 [Accessed Feb. 23, 2019]</span>
+        <br>
+        <span class="small eng">[6] “Evaluation Measures for Multiclass Problems,” Feb. 2016. [Online]. Available: http://gabrielelanaro.github.io/blog/2016/02/03/multiclass-evaluation-measures.html [Accessed Mar. 10, 2019].</span>
+        <br>
+        <span class="small eng">[7]  J. Pan and W. J. Tompkins, “A real-time qrs detection algorithm,” vol.BME-32, no.3, pp.230–236, 1985. </span>
+        <br>
+        <span class = "pageNo">33</span>
+    </div>
+
+    <div class="step slide" data-x="51500" data-y="-1500">
+        <span class="small eng">[8] B. Subramanian, “Ecg signal classification and parameter estimation using multiwavelet transform,” vol.28, no.12, 2017.</span>
+        <br>
+        <span class="small eng">[9] P. deChazal, M. O’Dwyer, and R. B. Reilly, “Automatic classification of heartbeats using ecg morphology and heartbeat interval features,” vol.51, no.7, pp.1196–1206, 2004.</span>
+        <br>
+        <span class="small eng">[10] V. Mondéjar-Guerra, J. Novo, J. Rouco, M. G. Penedo, and M. Ortega, “Heartbeat classification fusing temporal and morphological information of ecgs via ensemble of classifiers,”vol.47, pp.41–48, 2019.</span>
+        <br>
+        <span class="small eng">[11] T. Mar, S. Zaunseder, J. P. Martinez, M. Llamedo, and R. Poll, “Optimization of ecg classification by means of feature selection,” vol.58, no.8, pp.2168–2177, 2011.</span>
+        <br>
+        <span class = "pageNo">34</span>
+    </div>
+
+    <div class="step" data-x="53000" data-y="-1500" style="">
+        <p class="slideText" style="margin: auto; font-size: 1.2em; color: white;">
+            با سپاس از توجه شما
+        </p>
+
+    </div>
 
     <!--<div id="overview" class="step" data-x="3000" data-y="1500" data-z="0" data-scale="10">-->
     <!--</div>-->
@@ -681,6 +904,119 @@ if ("ontouchstart" in document.documentElement) {
 -->
 <script src="js/impress.js"></script>
 <script>impress().init();</script>
+
+<script >
+  document.getElementsByTagName("body")[0].addEventListener("keyup", function(e){
+
+    switch ( e.keyCode ) {
+      case 9:  // Tab
+      case 32: // Space
+      case 34: // Page down
+      case 39: // Right
+      case 40: // Down
+
+        if($('#introSlide').hasClass("active")){
+          $("#references").removeClass("currentSlide");
+          $("#intro").addClass("currentSlide");
+        }
+
+        if($('#principlesSlide').hasClass("active")){
+          $("#intro").removeClass("currentSlide");
+          $("#principles").addClass("currentSlide");
+        } //else {
+        //     $("#prevWorks").removeClass("border", 1000);
+        //     $("#intro").addClass("border", 1000);
+
+        // }
+//        if($('#methodSlide').hasClass("active")){
+//          $("#intro").removeClass("currentSlide");
+//          $("#method").addClass("currentSlide");
+//        }
+
+        if($('#experimentSlide').hasClass("active")){
+          $("#principles").removeClass("currentSlide");
+          $("#experiment").addClass("currentSlide");
+        }
+
+        if($('#expResultSlide').hasClass("active")){
+          $("#experiment").removeClass("currentSlide");
+          $("#exp_results").addClass("currentSlide");
+        }
+
+        if($('#resultSlide').hasClass("active")){
+          $("#exp_results").removeClass("currentSlide");
+          $("#result").addClass("currentSlide");
+        }
+
+        if($('#referencesSlide').hasClass("active")){
+          $("#result").removeClass("currentSlide");
+          $("#references").addClass("currentSlide");
+        }
+
+
+        break;
+      case 33: // Page up
+      case 37: // Left
+      case 38: // Up
+//                if($('#referencesSlide').hasClass("active")){
+//                    $("#result").addClass("currentSlide");
+//                    $("#references").removeClass("currentSlide");
+//                }
+
+//                if($('#introslide').hasClass("active")){
+//                    $("#prevWorks").removeClass("border", 1000);
+//                    $("#intro").addClass("currentSlide");
+//                }// else {
+        //     $("#prevWorks").removeClass("border");
+        //     $("#intro").addClass("border");
+
+        // }
+
+        if($('#its').hasClass("active")){
+          $("#prevWorks").addClass("border", 1000);
+          $("#prevWorksText").addClass("border", 1000);
+          $("#ways").removeClass("border", 1000);
+          $("#waysText").removeClass("border", 1000);
+        }
+
+        if($('#big').hasClass("active")){
+          $("#ways").addClass("border", 1000);
+          $("#waysText").addClass("border", 1000);
+          $("#method").removeClass("border", 1000);
+          $("#methodText").removeClass("border", 1000);
+        }
+
+        if($('#afterBig3').hasClass("active")){
+          $("#method").addClass("border", 1000);
+          $("#methodText").addClass("border", 1000);
+          $("#test").removeClass("border", 1000);
+          $("#testText").removeClass("border", 1000);
+        }
+
+        if($('#resultSlide').hasClass("active")){
+          $("#test").addClass("border", 1000);
+          $("#testText").addClass("border", 1000);
+          $("#result").removeClass("border", 1000);
+          $("#resultText").removeClass("border", 1000);
+        }
+
+        if($('#refrenceSlide').hasClass("active")){
+          $("#result").addClass("border", 1000);
+          $("#resultText").addClass("border", 1000);
+          $("#refrence").removeClass("border", 1000);
+          $("#refrenceText").removeClass("border", 1000);
+        }
+
+        if($('#first').hasClass("active")){
+          $("#DIVOUTLINE").fadeOut(1000);
+          // $("#intro").removeClass("border", 1000);
+          // $("#ways").addClass("border", 1000);
+        }
+        break;
+    }
+
+  });
+</script>
 
 <!--
 

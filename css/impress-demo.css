@@ -126,7 +126,7 @@ body {
     font-family: 'Sahel';
     min-height: 740px;
 
-    background: linear-gradient(to right, #4a6987, #0082c8);
+    background: linear-gradient(to right, #324a71, #0082c8);
     /*background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));*/
     /*background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));*/
     /*background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));*/
@@ -148,7 +148,7 @@ a {
     color: inherit;
     text-decoration: none;
     padding: 0 0.1em;
-    background: rgba(255,255,255,0.5);
+    /*background: rgba(255,255,255,0.5);*/
     text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
     border-radius: 0.2em;
 
@@ -166,7 +166,11 @@ a:focus {
 }
 
 
+ul{
+    padding-top: 5%
+}
 .main-list li {
+    font-family: 'Sahel';
     height: auto;
     float:inherit;
     direction: rtl;
@@ -176,7 +180,8 @@ a:focus {
 
 }
 .main-list li a {
-    /*color:  #ffffff;*/
+    font-family: 'Sahel-ED';
+    color: #cfcfcf;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -185,8 +190,8 @@ a:focus {
     font-weight: bold;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
-}
 
+}
 .slideText{
     font-size: 0.8em;
     direction : rtl;
@@ -201,6 +206,24 @@ a:focus {
     direction : rtl;
     text-align: right;
     line-height: 1.9em;
+}
+
+.small {
+    font-size: 0.6em;
+}
+
+.imgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%
+}
+
+.caption {
+    font-family: Sahel;
+    font-size: 0.5em;
+    margin:auto;
+    direction: rtl
 }
 
 .eng {
@@ -220,7 +243,7 @@ a:focus {
 }
 
 .blue {
-    color: #4a6987;
+    color: #465e87;
 }
 
 .container {
@@ -230,11 +253,11 @@ a:focus {
 }
 
 .currentSlide{
-    /*background-color : #ffffff;*/
-    /*opacity: 1;*/
-    color:  #ffffff;
+    color:  #465e87;
+    background: rgba(255, 255, 255, 0.23);
     font-weight: bold;
 }
+
 
 .logoFirstPage{
     display:block;
